@@ -11,7 +11,11 @@ import SwiftUI
 struct racingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                DefaultPageNav.init(inBody: AnyView(
+                    ContentView()
+                ), hideBack: true)
+            }
         }
     }
 }
